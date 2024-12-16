@@ -743,6 +743,11 @@ nav {
 
 /* Custom order for mobile view */
 @media (max-width: 991px) {
+
+    .nav-contact-btn {
+        display: none;
+    }
+
     .mobile-order-1 {
         order: 1;
     }
@@ -782,5 +787,14 @@ nav {
     .get-in-touch {
         margin-top: 10px;
         width: 100%;
+    }
+
+    .hero-section {
+        margin-top: -96px;
+
+    }
+
+    .hero-title {
+        font-size: 50px;
     }
 }
