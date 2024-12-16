@@ -4,7 +4,9 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-
+.bg-two {
+    background-color: #eaf3f5
+}
 
 .top-bar {
     background-color: #f8f9fa;
