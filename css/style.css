@@ -25,6 +25,8 @@ body {
 
 
 
+
+
 .pages-header {
     min-height: 40vh;
     /* Minimum height for the section */
@@ -116,6 +118,44 @@ nav {
     margin-left: 15px;
     font-size: 21px;
     text-decoration: none;
+}
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+/* Hover to display sub-dropdown */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid #162f45;
+    line-height: 120%;
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #0d9488 !important;
+    color: white;
+}
+
+/* Make dropdown items work well on mobile */
+@media (max-width: 991px) {
+    .dropdown-submenu .dropdown-menu {
+        left: 0 !important;
+    }
 }
 
 .get-in-touch {

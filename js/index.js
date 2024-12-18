@@ -1,3 +1,12 @@
+document.querySelectorAll('.dropdown-submenu a').forEach(function (submenu) {
+    submenu.addEventListener('click', function (event) {
+        var nextEl = submenu.nextElementSibling;
+        if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+            event.preventDefault();
+            nextEl.classList.toggle('show');
+        }
+    });
+});
 
 
 window.addEventListener("scroll", function () {

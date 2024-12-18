@@ -4,404 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us || Sai Rubber</title>
+    <title>Navbar with Dropdown and Sub Dropdown</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional CSS for styling */
+        .dropdown-submenu {
+            position: relative;
+        }
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/style.css">
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+
+        /* Make sub-dropdown appear on hover */
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-
-    <div class="top-bar">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-8">
-                    <span class="me-4">
-                        <i class="bi bi-envelope"></i>
-                        admin@sairubberengg.co.in, sairubberengg@gmail.com
-                    </span>
-                    <span class="me-4">
-                        <i class="bi bi-telephone"></i>
-                        +919311132251, 9911132251, 9811132251 </span>
-                    <span>
-                        <i class="bi bi-geo-alt"></i>
-                        Plot No. 895, Sector-69, IMT, Faridabad
-                        (Haryana)-121004 India
-                    </span>
-                </div>
-                <div class="col-lg-4  text-start mt-2 mt-lg-0 text-lg-end social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="/img/logo.png" alt="sai rubber">
-            </a>
-
-            <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="about.html">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/product.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="service.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">blog</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-
-                </ul>
-            </div>
-            <a class="nav-contact-btn get-in-touch btn" href="contact.html">Get in touch</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Sub Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Sub Action 1</a>
+                                <a class="dropdown-item" href="#">Sub Action 2</a>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-
-    <section class="products-section">
-        <div class="container">
-            <h2 class="section-title">Elevate Your Projects with Our Products</h2>
-            <p class="section-description">
-                Enhance your construction endeavors with our extensive range of high-quality construction materials and
-                equipment, carefully curated to empower your projects' success.
-            </p>
-
-            <div class="row">
-                <!-- PVC Trims Section -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Pvc-Trims.webp" alt="Strip Seal" class="product-image">
-                        <h4>Strip Seal</h4>
-                        <p class="category">PVC Trims</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">StructuralPro</span>
-                        </div>
-                        <a href="/product/strip-seal.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Compression-Seal.webp" alt="Compression Seal" class="product-image">
-                        <h4>Compression Seal</h4>
-                        <p class="category">PVC Trims</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">StructuralPro</span>
-                        </div>
-                        <a href="/product/compression-seal.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Industrial-Rubber-Seal.webp" alt="Industrial Rubber Seal"
-                            class="product-image">
-                        <h4>Industrial Rubber Seal</h4>
-                        <p class="category">PVC Trims</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">StructuralPro</span>
-                        </div>
-                        <a href="/product/industrial-rubber-seal.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Wheel Chocks Section -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Door-Gola-Beading.jpg" alt="Door Gola Beading" class="product-image">
-                        <h4>Door Gola Beading</h4>
-                        <p class="category">Wheel Chock</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">SteelCraft</span>
-                        </div>
-                        <a href="/product/door-gola-beading.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Wheel-Chocks.webp" alt="Wheel Chocks" class="product-image">
-                        <h4>Wheel Chocks</h4>
-                        <p class="category">Wheel Chock</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">SteelCraft</span>
-                        </div>
-                        <a href="/product/wheel-chocks.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Diggi-Gola-Beeding.jpg" alt="Diggi Gola Beeding" class="product-image">
-                        <h4>Diggi Gola Beeding</h4>
-                        <p class="category">Wheel Chock</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">SteelCraft</span>
-                        </div>
-                        <a href="/product/diggi-gola-beeding.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bridge Bearings Section -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Bridge-Bearing-Pad.webp" alt="Bridge Bearing Pad" class="product-image">
-                        <h4>Bridge Bearing Pad</h4>
-                        <p class="category">Bridge Bearings</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">TimberTech</span>
-                        </div>
-                        <a href="/product/bridge-bearing-pad.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Additional Categories Section -->
-                <!-- Adding the new categories you mentioned -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Bus-Body-Rubber-Beading.jpg" alt="Bus Body Rubber Beading"
-                            class="product-image">
-                        <h4>Bus Body Rubber Beading</h4>
-                        <p class="category">Rubber Beading</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">ProRubber</span>
-                        </div>
-                        <a href="/product/bus-body-rubber-beading.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/EPDM-Rubber-Beading.jpg" alt="EPDM Rubber Beading" class="product-image">
-                        <h4>EPDM Rubber Beading</h4>
-                        <p class="category">Rubber Beading</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">ProRubber</span>
-                        </div>
-                        <a href="/product/epdm-rubber-beading.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Black-Rubber-Profile.jpg" alt="Black Rubber Profile"
-                            class="product-image">
-                        <h4>Black Rubber Profile</h4>
-                        <p class="category">Rubber Profiles</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">ProRubber</span>
-                        </div>
-                        <a href="/product/black-rubber-profile.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/U-Rubber-4mm-5mm.jpg" alt="4mm 5mm U-Rubber" class="product-image">
-                        <h4>4mm 5mm U-Rubber</h4>
-                        <p class="category">Rubber Profiles</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">RubberTech</span>
-                        </div>
-                        <a href="/product/u-rubber-4mm-5mm.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/Rubber-Cords.jpg" alt="Rubber Cords" class="product-image">
-                        <h4>Rubber Cords</h4>
-                        <p class="category">Rubber Parts</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">RubberTech</span>
-                        </div>
-                        <a href="/product/rubber-cords.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="product-card">
-                        <img src="/product-img/PVC-Water-Stopper-Rubber-Seal.jpg" alt="PVC Water Stopper Rubber Seal"
-                            class="product-image">
-                        <h4>PVC Water Stopper Rubber Seal</h4>
-                        <p class="category">Water Stopper</p>
-                        <div class="product-price">$500 - $2,500</div>
-                        <div class="product-meta">
-                            <span class="product-status">Mark</span>
-                            <span class="product-manufacturer">HydroSeal</span>
-                        </div>
-                        <a href="/product/pvc-water-stopper-rubber-seal.html" class="buy-now-btn">
-                            Learn More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Logo and Description -->
-                <div class="col-lg-3 col-md-6 footer-section">
-                    <div class="footer-logo">
-                        <img src="/" alt="sai rubeer footer-logo">
-                    </div>
-                    <p class="footer-tagline">Building Your Vision with Precision</p>
-                </div>
-
-                <!-- Quick Links 1 -->
-                <div class="col-lg-2 col-md-6 footer-section">
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Portofolio</a></li>
-                    </ul>
-                </div>
-
-                <!-- Quick Links 2 -->
-                <div class="col-lg-2 col-md-6 footer-section">
-                    <ul class="footer-links">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our team</a></li>
-                        <li><a href="#">Our story</a></li>
-                    </ul>
-                </div>
-
-                <!-- Quick Links 3 -->
-                <div class="col-lg-2 col-md-6 footer-section">
-                    <ul class="footer-links">
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Term of Use</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="col-lg-3 col-md-6 footer-section">
-                    <h5 class="newsletter-title">Stay informed with our newsletter</h5>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="bi bi-geo-alt"></i>
-                            Tegal, Indonesia
-                        </li>
-                        <li>
-                            <i class="bi bi-telephone"></i>
-                            +1 0239 0310
-                        </li>
-                        <li>
-                            <i class="bi bi-envelope"></i>
-                            support@struktura.com
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="copyright d-flex justify-content-between align-items-center flex-wrap">
-                <div>© Copyright 2023 Struktura</div>
-                <div class="social-links">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/index.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
